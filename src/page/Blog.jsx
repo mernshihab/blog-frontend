@@ -27,7 +27,7 @@ const Blog = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: `http://localhost:1010/api/v1/frontend/blog/singleblogs/${id}`,
+      url: `https://blog-backend-ai0z.onrender.com/api/v1/frontend/blog/singleblogs/${id}`,
     };
 
     axios

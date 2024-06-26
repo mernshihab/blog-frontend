@@ -31,7 +31,7 @@ const Dash = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://localhost:1010/api/v1/backend/blog/create",
+      url: "https://blog-backend-ai0z.onrender.com/api/v1/backend/blog/create",
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -93,7 +93,7 @@ const Dash = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://localhost:1010/api/v1/backend/blog/update",
+      url: "https://blog-backend-ai0z.onrender.com/api/v1/backend/blog/update",
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -154,7 +154,7 @@ const Dash = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "http://localhost:1010/api/v1/backend/blog/all",
+      url: "https://blog-backend-ai0z.onrender.com/api/v1/backend/blog/all",
     };
 
     axios

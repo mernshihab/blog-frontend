@@ -38,7 +38,7 @@ const Login = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://localhost:1010/api/v1/backend/auth/login",
+      url: "https://blog-backend-ai0z.onrender.com/api/v1/backend/auth/login",
       headers: {
         'Content-Type': 'application/json'
       },
