@@ -2,21 +2,23 @@ import axios from "axios";
 import { useState } from "react";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 
 const Registration = () => {
+  const navigate = useNavigate();
+
+  
   const [uname, setUname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [image, setImage] = useState("");
   const [error, setError] = useState({});
 
-  let data = useSelector((demo) => console.log(demo))
+
+  let data = useSelector((demo) => console.log(demo));
 
   const handleSubmit = () => {
-    console.log(uname, email, password, image);
-
+    // console.log(uname, email, password, image);
 
     let config = {
       method: "post",
@@ -53,6 +55,7 @@ const Registration = () => {
           setPassword("");
           setEmail("");
           setImage("");
+          navigate("/");
         }
       })
       .catch((error) => {
