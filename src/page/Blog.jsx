@@ -177,7 +177,7 @@ const Blog = () => {
                   <div className="p-4 my-4 border">
                     <img
                       className="h-[600px] w-full object-cover"
-                      src={`http://localhost:1010/api/v1/images/${blogInfo?.image}`}
+                      src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${blogInfo?.image}`}
                       alt=""
                     />
                   </div>
@@ -248,7 +248,7 @@ const Blog = () => {
          <div className="flex items-center mb-4">
            <img
              className="w-10 h-10 rounded-full me-4"
-             src={`http://localhost:1010/api/v1/images/${el.authId.image}`}
+             src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${el.authId.image}`}
              
              alt=""
            />

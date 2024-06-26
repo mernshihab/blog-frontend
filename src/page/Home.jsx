@@ -126,7 +126,7 @@ const Home = () => {
                     <div className="p-4 my-4 border">
                       <img
                         className="object-cover w-full h-60"
-                        src={`http://localhost:1010/api/v1/images/${el.image}`}
+                        src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${el.image}`}
                         alt=""
                       />
                     </div>
@@ -140,7 +140,7 @@ const Home = () => {
                       <div className="flex items-center space-x-4">
                         <img
                           className="rounded-full w-7 h-7"
-                          src={`http://localhost:1010/api/v1/images/${el.authId.image}`}
+                          src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${el.authId.image}`}
                           alt="Author avatar"
                         />
                         <span className="font-medium">{el.authId.uname}</span>

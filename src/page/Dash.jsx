@@ -212,7 +212,7 @@ const Dash = () => {
         >
           <img
             alt=""
-            src={`http://localhost:1010/api/v1/images/${data.image}`}
+            src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${data.image}`}
             className="h-28 w-28 absolute top-0 left-12 rounded-full"
           />
         </a>
@@ -414,7 +414,7 @@ const Dash = () => {
                       <td className="p-3 border" width="250px">
                         <img
                           alt=""
-                          src={`http://localhost:1010/api/v1/images/${el.image}`}
+                          src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${el.image}`}
                           className="h-11"
                         />
                       </td>
@@ -476,7 +476,7 @@ const Dash = () => {
                 <td className="border">
                   <img
                     alt=""
-                    src={`http://localhost:1010/api/v1/images/${editBlog?.image}`}
+                    src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${editBlog?.image}`}
                     className="h-11"
                   />
 
