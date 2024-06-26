@@ -293,7 +293,7 @@ const Dash = () => {
               <h1 className="mb-8 text-4xl font-bold leading-none text-gray-700">
                 You can post your blog here...
               </h1>
-              <Link to="/blog">See all blog</Link>
+              <Link to="/">See all blog</Link>
             </div>
 
             <table className="w-full text-left border shadow-sm">
