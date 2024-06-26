@@ -15,7 +15,7 @@ const Registration = () => {
   const [error, setError] = useState({});
 
 
-  let data = useSelector((demo));
+  let data = useSelector((demo) =>(demo));
 
   const handleSubmit = () => {
     // console.log(uname, email, password, image);
