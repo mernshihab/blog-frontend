@@ -191,16 +191,16 @@ const Dash = () => {
         </div>
 
         <div className="flex">
-          <div className="flex items-center justify-center w-16 text-white border-l">
+          <div className="flex items-center justify-center text-white border-l">
           <Link
               to="/"
-              className="py-2 px-5 cursor-pointer bg-green-500 rounded-md mr-6"
+              className="py-2 px-5 cursor-pointer bg-green-500 rounded-md mr-5"
             >
               Home
             </Link>
             <button
               onClick={handleLogout}
-              className="py-2 px-5 bg-red-600 mr-20 rounded-md"
+              className="py-2 px-5 bg-red-600 mr-8 rounded-md"
             >
               Logout
             </button>
