@@ -191,7 +191,7 @@ const Dash = () => {
         </div>
 
         <div className="flex">
-          <div className="flex items-center justify-center text-white border-l">
+          <div className="flex items-center justify-center pl-5 text-white border-l">
           <Link
               to="/"
               className="py-2 px-5 cursor-pointer bg-green-500 rounded-md mr-5"
