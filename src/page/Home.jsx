@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { userLoginInfo } from "../slice/counterSlice";
-import { FaFacebook, FaInstagram,FaGithub ,FaLinkedin  } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { IoMenu } from "react-icons/io5";
 
 const Home = () => {
   let data = useSelector((e) => e.user.userInfo);
@@ -16,6 +17,12 @@ const Home = () => {
     dispatch(userLoginInfo(null));
     localStorage.removeItem("userInfo");
     window.location.reload();
+  };
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   useEffect(() => {
@@ -55,11 +62,11 @@ const Home = () => {
               Bloogish
             </a>
           </div>
-          <div className="menu">
+          <div className="hidden md:flex items-center gap-6 md:gap-10">
             <ul className="flex items-center gap-6 md:gap-10">
               <li>
                 <Link
-                  to={"/dashboard"}
+                  to="/dashboard"
                   className="font-sans text-base font-semibold text-white/80"
                 >
                   Dashboard
@@ -68,7 +75,7 @@ const Home = () => {
               <li>
                 <a
                   href="https://portfolio-shihab.vercel.app/"
-                  target="blank"
+                  target="_blank"
                   className="font-sans text-base font-semibold text-white/80"
                 >
                   Shihab Portfolio
@@ -84,7 +91,53 @@ const Home = () => {
               </li>
             </ul>
           </div>
+          <div className="md:hidden">
+            <button onClick={toggleMenu} className="text-white text-xl">
+              <IoMenu />
+            </button>
+          </div>
         </div>
+        {isMenuOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
+            <div className="fixed inset-y-0 right-0 w-1/2 max-w-sm bg-slate-800 p-4 overflow-y-auto transition-transform transform translate-x-0 z-50">
+              <button onClick={toggleMenu} className="text-white mb-4">
+                Close
+              </button>
+              <ul className="flex flex-col items-start gap-4">
+                <li>
+                  <Link
+                    to="/dashboard"
+                    className="font-sans text-base font-semibold text-white/80"
+                    onClick={toggleMenu}
+                  >
+                    Dashboard
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="https://portfolio-shihab.vercel.app/"
+                    target="_blank"
+                    className="font-sans text-base font-semibold text-white/80"
+                    onClick={toggleMenu}
+                  >
+                    Shihab Portfolio
+                  </a>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      handleLogout();
+                      toggleMenu();
+                    }}
+                    className="font-sans text-base font-semibold text-white py-2 px-5 bg-red-600 rounded-md"
+                  >
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* content */}
@@ -96,9 +149,16 @@ const Home = () => {
                 Latest Blog
               </h2>
               <p className="font-light text-gray-500 sm:text-xl">
-                We use an agile approach to test assumptions and connect with
-                the needs of your audience early and often.
+              Stay updated with our newest posts and stories.
               </p>
+            </div>
+            <div className="flex justify-end ">
+              <Link
+                to={"/dashboard"}
+                className="font-semibold text-sm md:text-base bg-slate-900 text-white py-2 px-5 rounded-md my-5"
+              >
+                Post a Blog
+              </Link>
             </div>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {allBlog.length !== 0 &&
@@ -221,7 +281,7 @@ const Home = () => {
                   </li>
                 </ul>
               </div>
-              <div>
+              <div className="flex items-center">
                 <button
                   onClick={handleLogout}
                   className="font-sans text-base font-semibold text-white py-2 px-5 bg-red-600 rounded-md"
@@ -232,7 +292,7 @@ const Home = () => {
             </div>
           </div>
           <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-          <div className="sm:flex sm:items-center sm:justify-between">
+          <div className="flex flex-col sm:flex-row items-center sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-gray-500 sm:text-center">
               © 2024{" "}
               <a href="#" className="hover:underline">
@@ -241,21 +301,37 @@ const Home = () => {
               . All Rights Reserved.
             </span>
             <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-              <a target="blank" href="https://www.facebook.com/webshihab/" className="text-gray-400 hover:text-gray-900">
-                <FaFacebook/>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/webshihab/"
+                className="text-gray-400 hover:text-gray-900"
+              >
+                <FaFacebook />
                 <span className="sr-only">Facebook Account</span>
               </a>
-              <a target="blank" href="https://www.instagram.com/webshihab/" className="text-gray-400 hover:text-gray-900">
-                <FaInstagram/>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/webshihab/"
+                className="text-gray-400 hover:text-gray-900"
+              >
+                <FaInstagram />
                 <span className="sr-only">Instagram Account</span>
               </a>
-              <a target="blank" href="https://github.com/mernshihab" className="text-gray-400 hover:text-gray-900">
-                <FaGithub/>
-                <span className="sr-only">GitHub account</span>
+              <a
+                target="_blank"
+                href="https://github.com/mernshihab"
+                className="text-gray-400 hover:text-gray-900"
+              >
+                <FaGithub />
+                <span className="sr-only">GitHub Account</span>
               </a>
-              <a target="blank" href="https://www.linkedin.com/in/mernshihab/" className="text-gray-400 hover:text-gray-900">
-                <FaLinkedin/>
-                <span className="sr-only">Linkedin account</span>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/mernshihab/"
+                className="text-gray-400 hover:text-gray-900"
+              >
+                <FaLinkedin />
+                <span className="sr-only">Linkedin Account</span>
               </a>
             </div>
           </div>

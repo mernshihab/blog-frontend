@@ -3,6 +3,8 @@ import { useState } from "react";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Registration = () => {
   const navigate = useNavigate();
@@ -45,11 +47,14 @@ const Registration = () => {
             setError({ image: response.data.error.image });
           }
         } else if ("success" in response.data) {
-          setUname("");
-          setPassword("");
-          setEmail("");
-          setImage("");
-          navigate("/");
+          toast.success("Check your Email to verify");
+          setTimeout(() => {
+            setUname("");
+            setPassword("");
+            setEmail("");
+            setImage("");
+            navigate("/");
+          }, 3000);
         }
       })
       .catch((error) => {
@@ -59,6 +64,19 @@ const Registration = () => {
 
   return (
     <div className='bg-[url("/bg.svg")] bg-cover bg-center h-screen flex items-center px-3'>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition:Bounce
+      />
       <div className="h-[90%] w-full max-w-[1320px] mx-auto flex flex-col md:flex-row justify-center bg-white bg-opacity-5 rounded-xl shadow-md backdrop-blur-md overflow-hidden">
         <div className="hidden md:block md:w-1/2 bg-[url('/rgbg.webp')] bg-cover bg-center h-full"></div>
         <div className="flex flex-col items-center justify-center h-full w-full md:w-1/2 md:items-end md:pr-16 lg:pr-40 p-6 md:p-0">
@@ -132,7 +150,9 @@ const Registration = () => {
 
             <div className="relative">
               <fieldset className="px-2 pb-2 border rounded-md border-white/75">
-                <legend className="px-2 text-xs text-white/70">Profile Photo</legend>
+                <legend className="px-2 text-xs text-white/70">
+                  Profile Photo
+                </legend>
                 <input
                   className="w-full px-2 text-white bg-transparent border-0 outline-none ring-0"
                   type="file"
