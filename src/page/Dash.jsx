@@ -194,7 +194,7 @@ const Dash = () => {
           <div>
             <Link
               to="/"
-              className="py-2 px-5 bg-green-500 text-white rounded-md mr-10"
+              className="py-2 px-5 bg-green-500 text-white rounded-md mr-7"
             >
               Home
             </Link>
