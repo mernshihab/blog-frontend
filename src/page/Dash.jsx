@@ -213,7 +213,7 @@ const Dash = () => {
           <img
             alt=""
             src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${data.image}`}
-            className="h-28 w-28 absolute top-0 left-12 rounded-full"
+            className="h-28 w-28 absolute top-0 left-12 border border-white/75 rounded-full"
           />
         </a>
 
@@ -291,7 +291,7 @@ const Dash = () => {
           <div className="p-8 text-sm text-gray-800">
             <div className="flex justify-between">
               <h1 className="mb-8 text-4xl font-bold leading-none text-gray-700">
-                You can post your blog here...
+                Create your Blog...
               </h1>
               <div>
                 <Link
@@ -377,7 +377,7 @@ const Dash = () => {
           <div className="p-8 text-sm text-gray-800">
             <div className="flex justify-between">
               <h1 className="mb-8 text-4xl font-bold leading-none text-gray-700">
-                Your blog here...
+                Your blogs
               </h1>
               <div>
                 <Link
@@ -477,7 +477,7 @@ const Dash = () => {
           <div className="p-8 text-sm text-gray-800">
             <div className="flex justify-between">
               <h1 className="mb-8 text-4xl font-bold leading-none text-gray-700">
-                You can post your blog here...
+                Edit your Blog...
               </h1>
               <Link to="/blog">See all blog</Link>
             </div>
