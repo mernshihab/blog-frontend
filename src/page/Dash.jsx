@@ -191,6 +191,14 @@ const Dash = () => {
         </div>
 
         <div className="flex">
+          <div>
+            <Link
+              to="/"
+              className="py-2 px-5 bg-green-500 text-white rounded-md mr-10"
+            >
+              Home
+            </Link>
+          </div>
           <div className="flex items-center justify-center w-16 text-white border-l">
             <button
               onClick={handleLogout}
@@ -293,14 +301,6 @@ const Dash = () => {
               <h1 className="mb-8 text-4xl font-bold leading-none text-gray-700">
                 Create your Blog...
               </h1>
-              <div>
-                <Link
-                  to="/"
-                  className="py-2 px-5 bg-green-500 text-white rounded-md mr-10"
-                >
-                  Home
-                </Link>
-              </div>
             </div>
 
             <table className="w-full text-left border shadow-sm">
