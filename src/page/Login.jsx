@@ -32,7 +32,7 @@ const Login = () => {
       let config = {
         method: "post",
         maxBodyLength: Infinity,
-        url: "https://blog-backend-ai0z.onrender.com/api/v1/backend/auth/login",
+        url: "https://api.bloogish.mernshihab.xyz/api/v1/backend/auth/login",
         headers: {
           "Content-Type": "application/json",
         },

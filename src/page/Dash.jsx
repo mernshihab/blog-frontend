@@ -32,7 +32,7 @@ const Dash = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "https://blog-backend-ai0z.onrender.com/api/v1/backend/blog/create",
+      url: "https://api.bloogish.mernshihab.xyz/api/v1/backend/blog/create",
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -94,7 +94,7 @@ const Dash = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "https://blog-backend-ai0z.onrender.com/api/v1/backend/blog/update",
+      url: "https://api.bloogish.mernshihab.xyz/api/v1/backend/blog/update",
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -155,7 +155,7 @@ const Dash = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "https://blog-backend-ai0z.onrender.com/api/v1/backend/blog/all",
+      url: "https://api.bloogish.mernshihab.xyz/api/v1/backend/blog/all",
     };
 
     axios
@@ -193,7 +193,7 @@ const Dash = () => {
 
         <div className="flex">
           <div className="flex items-center justify-center pl-5 text-white border-l">
-          <Link
+            <Link
               to="/"
               className="py-2 px-5 cursor-pointer bg-green-500 rounded-md mr-5"
             >
@@ -219,7 +219,7 @@ const Dash = () => {
         >
           <img
             alt=""
-            src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${data.image}`}
+            src={`https://api.bloogish.mernshihab.xyz/api/v1/images/${data.image}`}
             className="h-28 w-28 absolute top-0 left-12 border border-white/75 rounded-full"
           />
         </a>
@@ -244,7 +244,7 @@ const Dash = () => {
                 : "text-gray-700"
             }`}
           >
-            <IoCreate className=" text-2xl mx-2.5 fill-current"/>
+            <IoCreate className=" text-2xl mx-2.5 fill-current" />
             Create Blog
           </button>
 
@@ -410,7 +410,7 @@ const Dash = () => {
                       <td className="p-3 border" width="250px">
                         <img
                           alt=""
-                          src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${el.image}`}
+                          src={`https://api.bloogish.mernshihab.xyz/api/v1/images/${el.image}`}
                           className="h-11"
                         />
                       </td>
@@ -472,7 +472,7 @@ const Dash = () => {
                 <td className="border">
                   <img
                     alt=""
-                    src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${editBlog?.image}`}
+                    src={`https://api.bloogish.mernshihab.xyz/api/v1/images/${editBlog?.image}`}
                     className="h-11"
                   />
 

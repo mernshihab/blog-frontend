@@ -35,7 +35,7 @@ const Home = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "https://blog-backend-ai0z.onrender.com/api/v1/frontend/blog/all",
+      url: "https://api.bloogish.mernshihab.xyz/api/v1/frontend/blog/all",
     };
 
     axios
@@ -149,7 +149,7 @@ const Home = () => {
                 Latest Blog
               </h2>
               <p className="font-light text-gray-500 sm:text-xl">
-              Stay updated with our newest posts and stories.
+                Stay updated with our newest posts and stories.
               </p>
             </div>
             <div className="flex justify-end ">
@@ -186,7 +186,7 @@ const Home = () => {
                     <div className="p-4 my-4 border">
                       <img
                         className="object-cover w-full h-60"
-                        src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${el.image}`}
+                        src={`https://api.bloogish.mernshihab.xyz/api/v1/images/${el.image}`}
                         alt=""
                       />
                     </div>
@@ -200,7 +200,7 @@ const Home = () => {
                       <div className="flex items-center space-x-4">
                         <img
                           className="rounded-full w-7 h-7"
-                          src={`https://blog-backend-ai0z.onrender.com/api/v1/images/${el.authId.image}`}
+                          src={`https://api.bloogish.mernshihab.xyz/api/v1/images/${el.authId.image}`}
                           alt="Author avatar"
                         />
                         <span className="font-medium">{el.authId.uname}</span>
